@@ -13,8 +13,9 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Updated Primary Color (Green) */
+    --primary: 145 63% 42%;
+    --primary-foreground: 0 0% 98%; /* Adjusted for high contrast on green */
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -22,32 +23,34 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Updated Accent Color (Blue) */
+    --accent: 210 70% 55%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
+    /* New Success Color */
+    --success: 130 65% 45%;
+    --success-foreground: 0 0% 98%; /* Adjusted for high contrast on success green */
+
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Updated Ring Color (to match new primary) */
+    --ring: 145 63% 42%;
 
     --radius: 0.5rem;
 
+    /* New Font Family */
+    --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -61,8 +64,9 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    /* Updated Primary Color (Green) - Dark Mode */
+    --primary: 145 55% 50%;
+    --primary-foreground: 145 80% 10%; /* Adjusted for high contrast on dark green */
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -70,15 +74,24 @@
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    /* Updated Accent Color (Blue) - Dark Mode */
+    --accent: 210 70% 65%;
+    --accent-foreground: 210 100% 10%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
+    /* New Success Color - Dark Mode */
+    --success: 130 55% 55%;
+    --success-foreground: 130 80% 10%; /* Adjusted for high contrast on dark success green */
+
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    /* Updated Ring Color (to match new primary) - Dark Mode */
+    --ring: 145 55% 50%;
+
+    /* --font-sans is inherited from :root */
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -97,5 +110,6 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans); /* Apply the new font family to the body */
   }
 }
